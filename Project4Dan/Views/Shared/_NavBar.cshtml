@@ -1,0 +1,33 @@
+﻿
+@{
+    Layout = null;
+}
+
+<div class="navbar-default sidebar" role="navigation">
+    <div class="sidebar-nav navbar-collapse">
+        <ul class="nav" id="side-menu">
+            <li class="sidebar-search">
+                @using (Html.BeginForm("Search", "Home", FormMethod.Post))
+                {
+                    <div class="input-group custom-search-form">
+                        <input name="title" type="text" class="form-control" placeholder="Search...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                }
+                <!-- /input-group -->
+            </li>
+            <li class="active">
+                <a href="/">Blank</a>
+            </li>
+            <li>
+                <a href="/dog">dog</a>
+            </li>
+
+        </ul>
+    </div>
+    <!-- /.sidebar-collapse -->
+</div>

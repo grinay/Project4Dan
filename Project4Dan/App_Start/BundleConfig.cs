@@ -14,18 +14,25 @@ namespace Project4Dan
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
 
-            // Use the development version of Modernizr to develop with and learn from. Then, when you're
-            // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
-            bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-                        "~/Scripts/modernizr-*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js"));
+            bundles.Add(new ScriptBundle("~/bundles/js").Include(
+                      "~/Content/vendor/bootstrap/js/bootstrap.js",
+                      "~/Content/vendor/metisMenu/metisMenu.min.js",
+                      "~/Content/dist/js/sb-admin-2.min.js"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+            bundles.Add(new StyleBundle("~/bundles/css").Include(
+                      "~/Content/vendor/bootstrap/css/bootstrap.min.css",
+                      "~/Content/vendor/font-awesome/css/font-awesome.min.css",
+                      "~/Content/vendor/metisMenu/metisMenu.min.css",
+                      "~/Content/dist/css/sb-admin-2.min.css"
+                      ));
+
+            bundles.Add(new ScriptBundle("~/flowchart").Include(
+                "~/Content/vendor/flot/jquery.flot.js",
+                "~/Content/vendor/flot/jquery.flot.pie.js"));
+
+            //.IncludeDirectory("~/Content/vendor/flot/", "*.js", true));
+
         }
     }
 }
